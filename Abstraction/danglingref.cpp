@@ -9,26 +9,22 @@ class Student {
 
     // constructor initializes age to 12
     Student() : age(12) {}
-
-    void getAge() {
-      cout << "Age = " << age << endl;
-    }
-    void setAge(int fixAge) {
-        age = fixAge;
-    }
+    void getAge()
+      {
+        cout<<"Age is:"<<age<<std::endl;
+      }
+      void setAge(int newAge)
+      {
+        age = newAge;
+      }
     void getObjectAsRef(Student *objectref) {
         delete objectref;
     }
 };
 
 int main() {
-
-  // dynamically declare Student object
-  Student* ptr = new Student();
-  Student obj = *ptr;
-
-  // call getAge() function
-  obj.getAge();
+  Student obj;  // call getAge() functionii  obj.getAge();
+  Student *ptr = new Student();
   ptr->getAge();
   ptr->getObjectAsRef(&obj);
   obj.setAge(13);
