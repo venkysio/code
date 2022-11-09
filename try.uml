@@ -1,0 +1,11 @@
+classDiagram {
+class className {
+   // VSD data
+   public:
+   int data;
+   public:
+   virtual void print()=0;
+   
+   // VSD functions
+};
+}
